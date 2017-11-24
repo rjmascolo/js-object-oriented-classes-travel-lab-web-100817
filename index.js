@@ -22,8 +22,8 @@ class Route {
   return eastWest.indexOf(avenue)
 }
   blocksTravelled(){
-    let horizontalDistance = this.avenueToInteger(this.endingLocation.horizontal) - this.avenueToInteger(this.beginningLocation.horizontal)
-    let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical
+    let horizontalDistance = this.avenueToInteger(this.endingLocation) - this.avenueToInteger(this.beginningLocation)
+    let verticalDistance = this.endingLocation - this.beginningLocation
     return (Math.abs(horizontalDistance) + Math.abs(verticalDistance))
   }
   estimatedTime(peak){
